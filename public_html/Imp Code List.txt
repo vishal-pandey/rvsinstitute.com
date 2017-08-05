@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click "Try it". Wait 3 seconds, and the page will alert "Hello".</p>
+
+<button onclick="setTimeout(myFunction, 3000);">Try it</button>
+
+<script>
+function myFunction() {
+    alert('Hello');
+}
+</script>
+
+</body>
+</html>
+
+
+// Watch in 24 hour format
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('watch').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="timedText()">Try it</button>
+
+<p id="demo">Click on "Try it". I will display when two, four, and six seconds have passed.</p>
+
+<script>
+function timedText() {
+    setTimeout(myTimeout1, 2000) 
+    setTimeout(myTimeout2, 4000) 
+    setTimeout(myTimeout3, 6000) 
+}
+function myTimeout1() {
+    document.getElementById("demo").innerHTML = "2 seconds";
+}
+function myTimeout2() {
+    document.getElementById("demo").innerHTML = "4 seconds";
+}
+function myTimeout3() {
+    document.getElementById("demo").innerHTML = "6 seconds";
+}
+</script>
+
+</body>
+</html>

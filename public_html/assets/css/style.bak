@@ -1,0 +1,48 @@
+/* Flip Logo Area Starts Here */
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+	/*  UPDATED! flip the pane when hovered */
+	.flip-container:hover .back {
+		transform: rotateY(0deg);
+	}
+	.flip-container:hover .front {
+	    transform: rotateY(180deg);
+	}
+
+.home-link{
+	position:relative;
+  margin:-37px 0;
+  padding:12px;
+  width:100px;
+  height:100px;
+  background-color:#1166BB;
+  border-radius:50%;
+  z-index:11;
+}
+.flip-container{
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  z-index:11;
+}
+.front{
+  margin:-4px;
+  width:108px;
+  height:108px;
+  background-image:url("../images/home-logo.png");
+  background-size:100% 100%;
+  border-radius:50%;
+}
+.back {
+  margin:-4px;
+  width:108px;
+  height:108px;
+  background-image:url("../images/home-logo.png");
+  background-size:100% 100%;
+  border-radius:50%;
+}
+
+/* flip speed goes here */
