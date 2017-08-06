@@ -4,7 +4,8 @@
       <a class="navbar-brand" href="#">RVS Institute</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="#">Home</a></li>
+      <?php if($_GET['link'] == ""){echo '<li class="active"><a href="./">Home</a></li>';}else{echo '<li><a href="./">Home</a></li>';} ?>
+      
       <li class="students"><a href="?link=students">Student</a></li>
       <li><a href="#">Schedule</a></li>
       <li><a href="#">Downloads</a></li>
