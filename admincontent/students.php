@@ -17,44 +17,7 @@
 	</div>
 	<div class="registered">
 		<h3 align="center">List Of Registered Students</h3>
-		<div>
-			<table class="table table-bordered">
-				<tr>
-					<th>Name</th>
-					<th>Father Name</th>
-					<th>Mother Name</th>
-					<th>Gender</th>
-					<th>Dob</th>
-					<th>Mobile No.</th>
-					<th>Email</th>
-					<th>Address</th>
-					<th>Course</th>
-					<th>Reg Date</th>
-					<th>Regno</th>
-				</tr>
-			<?php
-				$sql = "SELECT * FROM r_student";
-				$result = $conn->query($sql);
-				while($row = $result->fetch_assoc()){
-					if($row['s_regno'] == ""){
-						$row['s_regno'] = "<span class='btn btn-default addregno' id='".$row['s_mobile']."'>Assign Regno</span>";
-					}
-					echo "<tr>
-								<td>{$row['s_name']}</td>
-								<td>{$row['s_father']}</td>
-								<td>{$row['s_mother']}</td>
-								<td>{$row['s_gender']}</td>
-								<td>{$row['s_dob']}</td>
-								<td>{$row['s_mobile']}</td>
-								<td>{$row['s_email']}</td>
-								<td>{$row['s_add']}</td>
-								<td>{$row['s_course']}</td>
-								<td>{$row['s_rdate']}</td>
-								<td>{$row['s_regno']}</td>
-							</tr>";
-				}
-			?>
-			</table>
+		<div class="student-table">
 		</div>
 	</div>
 	<div class="course">
@@ -63,6 +26,10 @@
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){
+		$.post("./post/studenttable.php", function(data, status){
+            $('.student-table').html(data);
+            bindSubmit();
+        });
 		$('button').click(function(){
 			$(".main-content div").css("display","none");
 			$(".side-menu button").css("background","initial");
@@ -73,12 +40,104 @@
 		});
 		$('.addregno').click(function(){
 			var number = $(this).attr("id");
-			var data = '<form method="post" id="theForm"><input type="text" name="mobile" value="'+number+'" style="display:none;"><input type="text" name="s_regno"><input type="submit" name="submit" class="btn btn-default" id="regnosubmit"></form>';
+			var data = '<form method="post" id="theForm" action="./post/addregno.php"><input type="text" name="mobile" value="'+number+'" style="display:none;"><input type="text" name="s_regno"><input type = "submit" class="btn btn-default" value="submit" id="regnosubmit"></form>';
 			$(this).popover({title: "Enter Regno", content: data, html: true, placement: "left", animation: false});
-			// $(this).popover('toggle');
+			
 
 		});
 		$('.addregno').click();
+
+
+		function bindSubmit(){
+			$('.student-table').ready(function(){
+				$(".theForm").submit(function(e) {
+				    var url = "./post/addregno.php"; 
+
+				    $.ajax({
+				           type: "POST",
+				           url: url,
+				           data: $(this).serialize(), 
+				           success: function(data)
+				           {
+				               if (data == "success") {
+				               		$.post("./post/studenttable.php", function(data, status){
+								            $('.student-table').html(data);
+								            bindSubmit();
+								        });
+
+				               }
+				           }
+				         });
+
+				    e.preventDefault(); 
+				});
+
+			});
+		}
+
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+
+		
+
+		
+
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+
+
+		
+		
+		
+
+		
+		
+		
+		
+		
+	 
+	 
+
+	 
+	 
+	        	
+	 
+		
 	});
 </script>
 <style type="text/css">
