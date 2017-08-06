@@ -23,9 +23,20 @@
 	<div class="course">
 		<h3 align="center">Add Courses</h3>
 	</div>
+	<span class="status">
+	</span>
+
 </div>
 <script type="text/javascript">
 	$(document).ready(function(){
+		$(document).ajaxStart(function(){
+       	 	$(".status").html("Processing ...");
+       	 	$(".status").css("display","block");
+    	});
+    	$(document).ajaxComplete(function(){
+        	$(".status").html("Done");
+       	 	$(".status").css("display","none");
+    	});
 		$.post("./post/studenttable.php", function(data, status){
             $('.student-table').html(data);
             bindSubmit();
@@ -74,70 +85,6 @@
 
 			});
 		}
-
-		
-		
-		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
-		
-
-		
-
-		
-
-		
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-		
-		
-
-
-		
-		
-		
-
-		
-		
-		
-		
-		
-	 
-	 
-
-	 
-	 
-	        	
-	 
-		
 	});
 </script>
 <style type="text/css">
