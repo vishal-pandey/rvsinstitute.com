@@ -3,7 +3,7 @@
     <br>
     <button class="btn btn-default col-sm-12" id="instruction">Instruction</button>
     <button class="btn btn-default col-sm-12" id="registered">Registered Students</button>
-    <button class="btn btn-default col-sm-12" id="course">Add Courses</button>
+    <button class="btn btn-default col-sm-12" id="course">Courses</button>
 </div>
 <div class="main-content col-sm-10 well">
 	<div class="instruction">
@@ -21,7 +21,8 @@
 		</div>
 	</div>
 	<div class="course">
-		<h3 align="center">Add Courses</h3>
+		<h3 align="center">Courses</h3>
+		<div class="course-table"></div>
 	</div>
 	<span class="status">
 	</span>
@@ -39,6 +40,10 @@
     	});
 		$.post("./post/studenttable.php", function(data, status){
             $('.student-table').html(data);
+            bindSubmit();
+        });
+        $.post("./post/coursetable.php", function(data, status){
+            $('.course-table').html(data);
             bindSubmit();
         });
 		$('button').click(function(){
@@ -73,6 +78,30 @@
 				               if (data == "success") {
 				               		$.post("./post/studenttable.php", function(data, status){
 								            $('.student-table').html(data);
+								            bindSubmit();
+								        });
+
+				               }
+				           }
+				         });
+
+				    e.preventDefault(); 
+				});
+			});
+			$('.course-table').ready(function(){
+				$(".courseform").submit(function(e) {
+				    var url = "./post/addcourse.php"; 
+
+				    $.ajax({
+				           type: "POST",
+				           url: url,
+				           data: $(this).serialize(), 
+				           success: function(data)
+				           {
+				               if (data == "success") {
+				               		
+				               		$.post("./post/coursetable.php", function(data, status){
+								            $('.course-table').html(data);
 								            bindSubmit();
 								        });
 
