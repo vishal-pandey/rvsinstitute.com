@@ -26,6 +26,7 @@
 <form class="courseform" method="post" action="./post/coursetable.php">
 	<table class="table table-bordered edittable">
 		<tr>
+			<th>Select to Delete</th>
 			<th>Course Id</th>
 			<th>Course Name</th>
 			<th>Course Code</th>
@@ -43,6 +44,7 @@
 
 
 				echo "	<tr>
+							<td><input type='checkbox' name='delete[]' value='{$CourseID}'></td>
 							<td><input type = 'text' name = 'CourseID[]' value = '{$CourseID}'></td>
 							<td><input type = 'text' name = 'Course_Name[]' value = '{$Course_Name}'></td>
 							<td><input type = 'text' name = 'Course_Code[]' value = '{$Course_Code}'></td>
@@ -67,7 +69,7 @@
 			$(".thetable").css("display","block");
 		});
 		$(".addcourse").click(function(){
-			$(".edittable").append("<tr><td><input type = 'text' name = 'CourseID[]'></td><td><input type = 'text' name = 'Course_Name[]'></td><td><input type = 'text' name = 'Course_Code[]'></td><td><input type = 'text' name = 'Active[]'></td></tr>");
+			$(".edittable").append("<tr><td></td><td><input type = 'text' name = 'CourseID[]'></td><td><input type = 'text' name = 'Course_Name[]'></td><td><input type = 'text' name = 'Course_Code[]'></td><td><input type = 'text' name = 'Active[]'></td></tr>");
 		});
 
 	});
@@ -85,5 +87,12 @@
 	}
 	table.edittable tr td{
 		padding: 0;
+	}
+	.theedit input[type="checkbox"]{
+		width: initial;
+		height: initial;
+		padding: initial;
+		margin-left: 45%;
+		margin-top: 10%;
 	}
 </style>

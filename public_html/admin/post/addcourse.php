@@ -17,7 +17,15 @@
 			$sql2 = "INSERT INTO course VALUES('{$CourseID}','{$Course_Name}','{$Course_Code}','{$Active}')";
 			$conn->query($sql2);
 		}
+		
 		$i++;
+	}
+	$j=0;
+	while(isset($_POST['delete'][$j])){
+		$delete =$_POST['delete'][$j];
+		$sql3 = "DELETE FROM course WHERE CourseID = '{$delete}'";
+		$conn->query($sql3);
+		$j++;
 	}
 	echo "success";
 ?>
