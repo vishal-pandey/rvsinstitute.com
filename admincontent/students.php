@@ -75,7 +75,6 @@
 				           data: $(this).serialize(), 
 				           success: function(data)
 				           {
-				           		alert(data);
 				               if (data == "success") {
 				               		$.post("./post/studenttable.php", function(data, status){
 								            $('.student-table').html(data);
