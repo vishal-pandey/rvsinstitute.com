@@ -4,6 +4,7 @@
     <button class="btn btn-default col-sm-12" id="instruction">Instruction</button>
     <button class="btn btn-default col-sm-12" id="registered">Registered Students</button>
     <button class="btn btn-default col-sm-12" id="course">Courses</button>
+    <button class="btn btn-default col-sm-12" id="assign">Assign Course</button>
 </div>
 <div class="main-content col-sm-10 well">
 	<div class="instruction">
@@ -23,6 +24,10 @@
 	<div class="course">
 		<h3 align="center">Courses</h3>
 		<div class="course-table"></div>
+	</div>
+	<div class="assign">
+		<h3 align="center">Assign Course</h3>
+		<div class=""></div>
 	</div>
 	<span class="status">
 	</span>
@@ -120,7 +125,7 @@
 	h3{
 		margin: 0;
 	}
-	div.registered , div.course{
+	div.registered , div.course , div.assign{
 		display: none;
 	}
 </style>
