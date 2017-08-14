@@ -7,9 +7,10 @@
       <?php if($_GET['link'] == ""){echo '<li class="active"><a href="./">Home</a></li>';}else{echo '<li><a href="./">Home</a></li>';} ?>
       
       <li class="students"><a href="?link=students">Student</a></li>
-      <li><a href="#">Schedule</a></li>
+      <li class="schedule"><a href="?link=schedule">Schedule</a></li>
       <li><a href="#">Downloads</a></li>
       <li><a href="#">Videos</a></li>
+      <li class="pages"><a href="?link=pages">Page</a></li>
 
     </ul>
     <ul class="nav navbar-nav navbar-right">
