@@ -48,6 +48,7 @@
                 <ul class="dropdown-menu">
                   <li class="rvs-grid">
                     <div class="row">
+                      <a href="./about.php?content=about-rvs">
                       <div class="col-sm-3">
                         <img src="assets/images/about.jpg" width="100%" class="img-responsive" alt="About RVS" />
                       </div>
@@ -55,6 +56,8 @@
                         <h3>About RVS Institute</h3>
                         <p></p>
                       </div>
+                      </a>
+                      <a href="./about.php?content=our-mission">
                       <div class="col-sm-3">
                         <img src="assets/images/about.jpg" width="100%" class="img-responsive" alt="About RVS" />
                       </div>
@@ -62,9 +65,10 @@
                         <h3>Our Mission and Vision</h3>
                         <p></p>
                       </div>
+                      </a>
                     </div>
                     <div class="row">
-                      <a href="about.php?FromMD" title="From the Pen of Managing Director">
+                      <a href="about.php?content=from-md" title="From the Pen of Managing Director">
                       <div class="col-sm-3">
                         <img src="assets/images/about.jpg" width="100%" class="img-responsive" alt="About RVS" />
                       </div>

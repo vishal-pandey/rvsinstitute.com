@@ -4,6 +4,11 @@
 		$title = $_POST['title'];
 		$content = $_POST['content'];
 		$pid = $_POST['pid'];
+
+		$security = new security();
+		$title = $security->convert($title);
+		$content = $security->convert($content);
+
 		$sql="update pages set title='{$title}', content='{$content}' where pid = '{$pid}';";
 		$conn->query($sql);
 	}
