@@ -66,8 +66,11 @@
 
 	class profile{
 		function getUser($mobile){
-			include_once "./secure/config.php";
+			include "./secure/config.php";
 			$sql1 = "SELECT * FROM r_student WHERE s_mobile='{$mobile}'";
+			// echo $sql1;
+			// if($conn == null)
+			// 	echo '\nerror: connection is null\n';
 			$result = $conn->query($sql1);
 			$row = $result->fetch_assoc();
 			return $row;
