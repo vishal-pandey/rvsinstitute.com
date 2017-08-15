@@ -16,4 +16,5 @@
 	$conn->query($sql2);
 
 	$sql3 = "create table academic_schedule(sno int(4), class text, subject text, day text, timing text, updated_on text)";
+	$conn->query($sql3);
 ?>
