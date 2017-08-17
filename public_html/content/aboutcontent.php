@@ -7,7 +7,7 @@
 ?>
     <div class="about well row first-row">
         <h2 align="center"><?php echo $row['title'] ?></h2>
-        <div class="col-sm-8 about-content">
+        <div class="col-sm-8 about-content fr-view">
         <hr id="hr">
             <p><?php echo $row['content']; ?></p>
         </div>
