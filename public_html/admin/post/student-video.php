@@ -1,18 +1,14 @@
 <?php
 	include_once "../../../adminlibrary/phplib.php";
-	$sql = "SELECT * FROM pages where pid = 'about-rvs'";
+	$sql = "SELECT * FROM pages where pid = 'student-video'";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 ?>
-<h3 align="center">About RVS Institute</h3>
-<form method="post" class="about-rvs-form">
-	<input type="text" name="pid" value="about-rvs" style="display: none;">
-	<span class="form-group" style="display: none;">
-		<label>Title</label>
-		<input type="text" name="title" class="form-control" placeholder="Title of the page" value="<?php echo $row['title'];?>">
-	</span>
-	<textarea name="content" class="form-control" rows="20" placeholder="Content of the page. Here You can use the html tags and css to style and modify the page"><?php echo $row['content'];?></textarea>
-	<input type="submit" name="submit" value="submit" class="btn btn-default about-rvs-form submit">
+<form method="post" class="student-video-form">
+	<input type="text" name="pid" value="student-video" style="display: none;">
+	<input type="text" name="title" class="form-control" placeholder="Title of the page" value="Home Work" style="display: none;">
+	<textarea name="content" class="form-control" rows="20"><?php echo $row['content'];?></textarea>
+	<input type="submit" name="submit" value="submit" class="btn btn-default">
 </form>
 <script type="text/javascript">
   tinymce.init({

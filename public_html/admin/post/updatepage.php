@@ -1,5 +1,5 @@
 <?php
-	if ($_POST['pid'] == 'about-rvs' || $_POST['pid'] == 'from-md' || $_POST['pid'] == 'our-mission' || $_POST['pid'] == 'home-work') {
+	if ($_POST['pid'] == 'about-rvs' || $_POST['pid'] == 'from-md' || $_POST['pid'] == 'our-mission' || $_POST['pid'] == 'home-work' || $_POST['pid'] == 'student-video') {
 		include_once "../../../adminlibrary/phplib.php";
 		$title = $_POST['title'];
 		$content = $_POST['content'];

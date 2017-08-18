@@ -6,6 +6,7 @@
     <button class="btn btn-default col-sm-12" id="course">Courses</button>
     <button class="btn btn-default col-sm-12" id="assign">Assign Course</button>
     <button class="btn btn-default col-sm-12" id="home-work">Home Work</button>
+    <button class="btn btn-default col-sm-12" id="student-video">Student Videos</button>
 </div>
 <div class="main-content col-sm-10 well">
 	<div class="instruction">
@@ -34,6 +35,10 @@
 		<h3 align="center">Home Work</h3>
 		<div class="home-work-content"></div>
 	</div>
+	<div class="student-video">
+		<h3 align="center">Student Videos</h3>
+		<div class="student-video-content"></div>
+	</div>
 	<span class="status">
 	</span>
 
@@ -54,6 +59,10 @@
         });
         $.post("./post/home-work.php", function(data, status){
             $('.home-work-content').html(data);
+            bindSubmit();
+        });
+        $.post("./post/student-video.php", function(data, status){
+            $('.student-video-content').html(data);
             bindSubmit();
         });
         $.post("./post/coursetable.php", function(data, status){
@@ -149,6 +158,29 @@
 				    e.preventDefault(); 
 				});
 			});
+			$('.student-video').ready(function(){
+				$(".student-video-form").submit(function(e) {
+				    var url = "./post/updatepage.php"; 
+
+				    $.ajax({
+				           type: "POST",
+				           url: url,
+				           data: $(this).serialize(), 
+				           success: function(data)
+				           {
+				               if (data == "success") {
+				               		
+				               		$.post("./post/student-video.php", function(data, status){
+								            $('.student-video-content').html(data);
+								            bindSubmit();
+								        });
+
+				               }
+				           }
+				         });
+				    e.preventDefault(); 
+				});
+			});
 		}
 	});
 </script>
@@ -156,7 +188,7 @@
 	h3{
 		margin: 0;
 	}
-	div.registered , div.course , div.assign , div.home-work{
+	div.registered , div.course , div.assign , div.home-work, div.student-video{
 		display: none;
 	}
 </style>
