@@ -12,8 +12,6 @@
 	class security
 	{
 		function convert($var){
-			$var = stripcslashes($var);
-			$var = trim($var);
 			return $var;
 		}
 	}

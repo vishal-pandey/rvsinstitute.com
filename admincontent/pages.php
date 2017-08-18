@@ -65,8 +65,7 @@
 		function bindSubmit(){
 			$('.about-rvs').ready(function(){
 				$(".about-rvs-form").submit(function(e) {
-				    var url = "./post/updatepage.php"; 
-				    $('textarea').froalaEditor();
+				    var url = "./post/updatepage.php";
 				    $.ajax({
 				           type: "POST",
 				           url: url,
