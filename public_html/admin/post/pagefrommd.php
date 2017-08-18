@@ -4,9 +4,10 @@
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 ?>
+<h3 align="center">From the MD's pen</h3>
 <form method="post" class="from-md-form">
 	<input type="text" name="pid" value="from-md" style="display: none;">
-	<span class="form-group">
+	<span class="form-group" style="display: none;">
 		<label>Title</label>
 		<input type="text" name="title" class="form-control" placeholder="Title of the page" value="<?php echo $row['title'];?>">
 	</span>
