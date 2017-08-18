@@ -15,6 +15,10 @@
 	$sql2 = "INSERT INTO pages (pid) VALUES ('our-mission')";
 	$conn->query($sql2);
 
+	$sql2 = "INSERT INTO pages (pid, title) VALUES ('home-work', 'Home Work')";
+	$conn->query($sql2);
+
 	$sql3 = "create table academic_schedule(sno int(4), class text, subject text, day text, timing text, updated_on text)";
 	$conn->query($sql3);
+
 ?>

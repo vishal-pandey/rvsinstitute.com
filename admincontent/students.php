@@ -5,6 +5,7 @@
     <button class="btn btn-default col-sm-12" id="registered">Registered Students</button>
     <button class="btn btn-default col-sm-12" id="course">Courses</button>
     <button class="btn btn-default col-sm-12" id="assign">Assign Course</button>
+    <button class="btn btn-default col-sm-12" id="home-work">Home Work</button>
 </div>
 <div class="main-content col-sm-10 well">
 	<div class="instruction">
@@ -29,6 +30,10 @@
 		<h3 align="center">Assign Course</h3>
 		<div class=""></div>
 	</div>
+	<div class="home-work">
+		<h3 align="center">Home Work</h3>
+		<div class="home-work-content"></div>
+	</div>
 	<span class="status">
 	</span>
 
@@ -45,6 +50,10 @@
     	});
 		$.post("./post/studenttable.php", function(data, status){
             $('.student-table').html(data);
+            bindSubmit();
+        });
+        $.post("./post/home-work.php", function(data, status){
+            $('.home-work-content').html(data);
             bindSubmit();
         });
         $.post("./post/coursetable.php", function(data, status){
@@ -116,7 +125,29 @@
 
 				    e.preventDefault(); 
 				});
+			});
+			$('.home-work').ready(function(){
+				$(".home-work-form").submit(function(e) {
+				    var url = "./post/updatepage.php"; 
 
+				    $.ajax({
+				           type: "POST",
+				           url: url,
+				           data: $(this).serialize(), 
+				           success: function(data)
+				           {
+				               if (data == "success") {
+				               		
+				               		$.post("./post/home-work.php", function(data, status){
+								            $('.home-work-content').html(data);
+								            bindSubmit();
+								        });
+
+				               }
+				           }
+				         });
+				    e.preventDefault(); 
+				});
 			});
 		}
 	});
@@ -125,7 +156,7 @@
 	h3{
 		margin: 0;
 	}
-	div.registered , div.course , div.assign{
+	div.registered , div.course , div.assign , div.home-work{
 		display: none;
 	}
 </style>

@@ -1,17 +1,14 @@
 <?php
 	include_once "../../../adminlibrary/phplib.php";
-	$sql = "SELECT * FROM pages where pid = 'our-mission'";
+	$sql = "SELECT * FROM pages where pid = 'home-work'";
 	$result = $conn->query($sql);
 	$row = $result->fetch_assoc();
 ?>
-<form method="post" class="our-mission-form">
-	<input type="text" name="pid" value="our-mission" style="display: none;">
-	<span class="form-group">
-		<label>Title</label>
-		<input type="text" name="title" class="form-control" placeholder="Title of the page" value="<?php echo $row['title'];?>">
-	</span>
+<form method="post" class="home-work-form">
+	<input type="text" name="pid" value="home-work" style="display: none;">
+	<input type="text" name="title" class="form-control" placeholder="Title of the page" value="Home Work" style="display: none;">
 	<textarea name="content" class="form-control" rows="20"><?php echo $row['content'];?></textarea>
-	<input type="submit" name="submit" value="submit" class="btn btn-default our-mission-form">
+	<input type="submit" name="submit" value="submit" class="btn btn-default">
 </form>
 <script type="text/javascript">
   tinymce.init({
@@ -36,3 +33,4 @@
 	  ]
     });
 </script>
+
