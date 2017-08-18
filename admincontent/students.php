@@ -7,6 +7,7 @@
     <button class="btn btn-default col-sm-12" id="assign">Assign Course</button>
     <button class="btn btn-default col-sm-12" id="home-work">Home Work</button>
     <button class="btn btn-default col-sm-12" id="student-video">Student Videos</button>
+    <button class="btn btn-default col-sm-12" id="result">Results</button>
 </div>
 <div class="main-content col-sm-10 well">
 	<div class="instruction">
@@ -39,6 +40,10 @@
 		<h3 align="center">Student Videos</h3>
 		<div class="student-video-content"></div>
 	</div>
+	<div class="result">
+		<h3 align="center">Examination Result</h3>
+		<div class="result-content"></div>
+	</div>
 	<span class="status">
 	</span>
 
@@ -63,6 +68,10 @@
         });
         $.post("./post/student-video.php", function(data, status){
             $('.student-video-content').html(data);
+            bindSubmit();
+        });
+        $.post("./post/result.php", function(data, status){
+            $('.result-content').html(data);
             bindSubmit();
         });
         $.post("./post/coursetable.php", function(data, status){
@@ -181,6 +190,29 @@
 				    e.preventDefault(); 
 				});
 			});
+			$('.result').ready(function(){
+				$(".result-form").submit(function(e) {
+				    var url = "./post/updatepage.php"; 
+
+				    $.ajax({
+				           type: "POST",
+				           url: url,
+				           data: $(this).serialize(), 
+				           success: function(data)
+				           {
+				               if (data == "success") {
+				               		
+				               		$.post("./post/result.php", function(data, status){
+								            $('.result-content').html(data);
+								            bindSubmit();
+								        });
+
+				               }
+				           }
+				         });
+				    e.preventDefault(); 
+				});
+			});
 		}
 	});
 </script>
@@ -188,7 +220,7 @@
 	h3{
 		margin: 0;
 	}
-	div.registered , div.course , div.assign , div.home-work, div.student-video{
+	div.registered , div.course , div.assign , div.home-work, div.student-video , div.result{
 		display: none;
 	}
 </style>
