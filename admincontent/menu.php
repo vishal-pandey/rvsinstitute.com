@@ -8,7 +8,7 @@
       
       <li class="students"><a href="?link=students">Student</a></li>
       <li class="schedule"><a href="?link=schedule">Schedule</a></li>
-      <li><a href="#">Downloads</a></li>
+      <li class="downloads"><a href="?link=downloads">Downloads</a></li>
       <li><a href="#">Videos</a></li>
       <li class="pages"><a href="?link=pages">Page</a></li>
 
