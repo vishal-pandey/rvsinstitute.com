@@ -39,6 +39,16 @@
 	$sql2 = "INSERT INTO pages (pid, title) VALUES ('imp-question', 'Important Question')";
 	$conn->query($sql2);
 
+
+	$sql2 = "INSERT INTO pages (pid, title) VALUES ('exam-date', 'Examination Date')";
+	$conn->query($sql2);
+
+	$sql2 = "INSERT INTO pages (pid, title) VALUES ('exam-topper', 'Topper Of The Test')";
+	$conn->query($sql2);
+
+	$sql2 = "INSERT INTO pages (pid, title) VALUES ('exam-govt', 'Government Job Vacancy')";
+	$conn->query($sql2);
+
 	$sql3 = "create table academic_schedule(sno int(4), class text, subject text, day text, timing text, updated_on text)";
 	$conn->query($sql3);
 

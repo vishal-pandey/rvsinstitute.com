@@ -115,9 +115,9 @@
                   <li class="rvs-grid">
                     <div class="row">
                       <div class="col-sm-3"><h3>Class Schedule</h3><ul><a href="./schedule.php?content=academic-schedule" title="Academic Schedule"><li>Academic Schedule</li></a><a href="./schedule.php?content=other-schedule" title="Other Schedule"><li>Other Schedule</li></a><a href="./schedule.php?content=upcoming-batches" title="Upcoming Batches"><li>Upcoming Batches</li></a></ul></div>
-                      <div class="col-sm-3"><h3>Examinations</h3><ul><a href="#" title="#"><li>Examination Date</li></a><a href="#" title="#"><li>Examination Results</li></a><a href="#" title="#"><li>Toppers of the Tests</li></a></ul></div>
-                      <div class="col-sm-3"><h3>Downloads</h3><ul><a href="#" title="#"><li>CBSE Sample Papers</li></a><a href="#" title="#"><li>RVS Practice Papers</li></a><a href="#" title="#"><li>Important Questions</li></a></ul></div>
-                      <div class="col-sm-3"><h3>Other Links</h3><ul><a href="#" title="#"><li>Government Job Vacancy</li></a><a href="#" title="#"><li></a></li></ul></div>
+                      <div class="col-sm-3"><h3>Examinations</h3><ul><a href="./examination.php?content=exam-date" title="#"><li>Examination Date</li></a><a href="./student.php?link=result" title="#"><li>Examination Results</li></a><a href="./examination.php?content=exam-topper" title="#"><li>Toppers of the Tests</li></a></ul></div>
+                      <div class="col-sm-3"><h3>Downloads</h3><ul><a href="./download.php?content=cbse-paper" title="#"><li>CBSE Sample Papers</li></a><a href="./download.php?content=rvs-paper" title="#"><li>RVS Practice Papers</li></a><a href="./download.php?content=imp-question" title="#"><li>Important Questions</li></a></ul></div>
+                      <div class="col-sm-3"><h3>Other Links</h3><ul><a href="./examination.php?content=exam-govt" title="#"><li>Government Job Vacancy</li></a><a href="#" title="#"><li></a></li></ul></div>
                     </div>
                     <div class="row">
                       <div class="col-sm-12">

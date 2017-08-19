@@ -6,7 +6,14 @@
     <button class="btn btn-default col-sm-12" id="about-rvs">About RVS Institute</button>
     
     <button class="btn btn-default col-sm-12" id="from-md">From the MD's Pen</button>
+    
     <button class="btn btn-default col-sm-12" id="our-mission">Our Mission And Vision</button>
+
+    <button class="btn btn-default col-sm-12" id="exam-date">Examination Date</button>
+
+    <button class="btn btn-default col-sm-12" id="exam-topper">Topper Of Test</button>
+
+    <button class="btn btn-default col-sm-12" id="exam-govt">Govt. Job Vaccancy</button>
 </div>
 <div class="main-content col-sm-10 well">
 	<div class="instruction">
@@ -25,6 +32,15 @@
 	</div>
 
 	<div class="our-mission">
+	</div>
+
+	<div class="exam-date">
+	</div>
+
+	<div class="exam-topper">
+	</div>
+
+	<div class="exam-govt">
 	</div>
 	
 	<span class="status">
@@ -53,13 +69,25 @@
             $('.our-mission').html(data);
             bindSubmit();
         });		
+        $.post("./post/exam-date.php", function(data, status){
+            $('.exam-date').html(data);
+            bindSubmit();
+        });
+        $.post("./post/exam-topper.php", function(data, status){
+            $('.exam-topper').html(data);
+            bindSubmit();
+        });
+        $.post("./post/exam-govt.php", function(data, status){
+            $('.exam-govt').html(data);
+            bindSubmit();
+        });
 		$('button').click(function(){
 			$(".main-content div").css("display","none");
 			$(".side-menu button").css("background","initial");
 			$(this).css("background","lightgrey");
 			var abc = $(this).attr("id");
 			$('.'+abc).css("display","block");
-			$('.'+abc+'>div').css("display","block");
+			$('.'+abc+'>div').css("display","initial");
 		});
 		
 		function bindSubmit(){
@@ -133,6 +161,78 @@
 				    e.preventDefault(); 
 				});
 			});
+
+			$('.exam-date').ready(function(){
+				$(".exam-date-form").submit(function(e) {
+				    var url = "./post/updatepage.php"; 
+
+				    $.ajax({
+				           type: "POST",
+				           url: url,
+				           data: $(this).serialize(), 
+				           success: function(data)
+				           {
+				               if (data == "success") {
+				               		$.post("./post/exam-date.php", function(data, status){
+								            $('.exam-date').html(data);
+								            bindSubmit();
+								        });
+
+				               }
+				           }
+				         });
+
+				    e.preventDefault(); 
+				});
+			});
+
+			$('.exam-topper').ready(function(){
+				$(".exam-topper-form").submit(function(e) {
+				    var url = "./post/updatepage.php"; 
+
+				    $.ajax({
+				           type: "POST",
+				           url: url,
+				           data: $(this).serialize(), 
+				           success: function(data)
+				           {
+				               if (data == "success") {
+				               		$.post("./post/exam-topper.php", function(data, status){
+								            $('.exam-topper').html(data);
+								            bindSubmit();
+								        });
+
+				               }
+				           }
+				         });
+
+				    e.preventDefault(); 
+				});
+			});
+
+			$('.exam-govt').ready(function(){
+				$(".exam-govt-form").submit(function(e) {
+				    var url = "./post/updatepage.php"; 
+
+				    $.ajax({
+				           type: "POST",
+				           url: url,
+				           data: $(this).serialize(), 
+				           success: function(data)
+				           {
+				               if (data == "success") {
+				               		$.post("./post/exam-govt.php", function(data, status){
+								            $('.exam-govt').html(data);
+								            bindSubmit();
+								        });
+
+				               }
+				           }
+				         });
+
+				    e.preventDefault(); 
+				});
+			});
 		}
 	});
 </script>
@@ -140,7 +240,7 @@
 	h3{
 		margin: 0;
 	}
-	div.about-rvs , div.from-md, div.our-mission{
+	div.about-rvs , div.from-md, div.our-mission, div.exam-date, div.exam-topper, div.exam-govt{
 		display: none;
 	}
 </style>
