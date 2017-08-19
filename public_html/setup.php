@@ -23,6 +23,12 @@
 	$sql2 = "INSERT INTO pages (pid, title) VALUES ('result', 'Examination Result')";
 	$conn->query($sql2);
 
+	$sql2 = "INSERT INTO pages (pid, title) VALUES ('other-schedule', 'Other Schedule')";
+	$conn->query($sql2);
+
+	$sql2 = "INSERT INTO pages (pid, title) VALUES ('upcoming-batches', 'Upcoming Batches')";
+	$conn->query($sql2);
+
 	$sql3 = "create table academic_schedule(sno int(4), class text, subject text, day text, timing text, updated_on text)";
 	$conn->query($sql3);
 

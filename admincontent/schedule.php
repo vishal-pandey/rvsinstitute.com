@@ -4,6 +4,10 @@
     <button class="btn btn-default col-sm-12" id="instruction">Instruction</button>
     
     <button class="btn btn-default col-sm-12" id="academic">Academic Schedules</button>
+
+    <button class="btn btn-default col-sm-12" id="other-schedule">Other Schedules</button>
+
+    <button class="btn btn-default col-sm-12" id="upcoming-batches">Upcoming Batches</button>
     
     
 </div>
@@ -18,6 +22,16 @@
 		</p>
 	</div>
 	<div class="academic">
+	</div>
+
+	<div class="other-schedule">
+		<h3 align="center">Other Schedule</h3>
+		<div class="other-schedule-content"></div>
+	</div>
+
+	<div class="upcoming-batches">
+		<h3 align="center">Upcoming Batches</h3>
+		<div class="upcoming-batches-content"></div>
 	</div>
 	
 	<span class="status">
@@ -36,6 +50,14 @@
     	});
     	$.post("./post/scheduleacademic.php", function(data, status){
             $('.academic').html(data);
+            bindSubmit();
+        });
+        $.post("./post/scheduleother.php", function(data, status){
+            $('.other-schedule-content').html(data);
+            bindSubmit();
+        });
+        $.post("./post/upcoming-batches.php", function(data, status){
+            $('.upcoming-batches-content').html(data);
             bindSubmit();
         });
         	
@@ -73,6 +95,53 @@
 				});
 			});
 
+			$('.other-schedule').ready(function(){
+				$(".other-schedule-form").submit(function(e) {
+				    var url = "./post/updatepage.php"; 
+
+				    $.ajax({
+				           type: "POST",
+				           url: url,
+				           data: $(this).serialize(), 
+				           success: function(data)
+				           {
+				               if (data == "success") {
+				               		$.post("./post/scheduleother.php", function(data, status){
+								            $('.other-schedule-content').html(data);
+								            bindSubmit();
+								        });
+
+				               }
+				           }
+				         });
+
+				    e.preventDefault(); 
+				});
+			});
+			$('.upcoming-batches').ready(function(){
+				$(".upcoming-batches-form").submit(function(e) {
+				    var url = "./post/updatepage.php"; 
+
+				    $.ajax({
+				           type: "POST",
+				           url: url,
+				           data: $(this).serialize(), 
+				           success: function(data)
+				           {
+				               if (data == "success") {
+				               		$.post("./post/upcoming-batches.php", function(data, status){
+								            $('.upcoming-batches-content').html(data);
+								            bindSubmit();
+								        });
+
+				               }
+				           }
+				         });
+
+				    e.preventDefault(); 
+				});
+			});
+
 		}
 	});
 </script>
@@ -80,7 +149,7 @@
 	h3{
 		margin: 0;
 	}
-	div.academic{
+	div.academic, div.other-schedule, div.upcoming-batches{
 		display: none;
 	}
 </style>
