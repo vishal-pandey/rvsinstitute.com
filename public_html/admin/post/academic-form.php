@@ -1,5 +1,5 @@
 <?php
-	include "../../../adminlibrary/phplib.php";
+	include_once "../../../adminlibrary/phplib.php";
 	$sql1 = "DELETE FROM academic_schedule";
 	$conn->query($sql1);
 	$i=0;

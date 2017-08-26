@@ -49,7 +49,10 @@
 	$sql2 = "INSERT INTO pages (pid, title) VALUES ('exam-govt', 'Government Job Vacancy')";
 	$conn->query($sql2);
 
-	$sql3 = "create table academic_schedule(sno int(4), class text, subject text, day text, timing text, updated_on text)";
+	$sql3 = "create table academic_schedule(sno int(4) primary key, class text, subject text, day text, timing text, updated_on text)";
 	$conn->query($sql3);
+
+	$sql4 = "create table notice (id int(4) primary key auto_increment , title varchar (500) UNIQUE, content text, creation date);";
+	$conn->query($sql4);
 
 ?>
