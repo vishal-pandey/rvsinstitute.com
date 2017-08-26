@@ -9,6 +9,13 @@
               <div class="col-sm-3">
               	<marquee direction="up" scrollamount="2" height="300">
                     <ul style="margin:0;padding:0;">
+                        <?php
+                          $sql = "select * from notice";
+                          $result = $conn->query($sql);
+                          while($row = $result->fetch_assoc()){
+                            echo '<a href="./notice.php?content='.$row['id'].'" target="_blank"><li>'.$row['title'].'</li></a>';
+                          }
+                        ?>
                         <a href="#"><li>New Batch (Batch 2) for Class 10th starts on April 3, 2017 (Monday)</li></a>
                         <a href="#"><li>New Batch (Batch 2) for Class 9th starts on April 3, 2017 (Monday)</li></a>
                         <a href="#"><li>Basic Computer Course - New Batch starts on April 15, 2017</li></a> 
