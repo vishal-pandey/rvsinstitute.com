@@ -16,12 +16,6 @@
                             echo '<a href="./notice.php?content='.$row['id'].'" target="_blank"><li>'.$row['title'].'</li></a>';
                           }
                         ?>
-                        <a href="#"><li>New Batch (Batch 2) for Class 10th starts on April 3, 2017 (Monday)</li></a>
-                        <a href="#"><li>New Batch (Batch 2) for Class 9th starts on April 3, 2017 (Monday)</li></a>
-                        <a href="#"><li>Basic Computer Course - New Batch starts on April 15, 2017</li></a> 
-                        <a href="#"><li>English Communication Skill - New Batch starts on April 10, 2017</li></a>                        
-                        <a href="#"><li>New Batch (Batch 1) for Class 10th starts on April 3, 2017 (Monday)</li></a>
-                        <a href="#"><li>New Batch (Batch 2) for Class 9th starts on April 3, 2017 (Monday)</li></a>
                     </ul>
                 </marquee>
               </div>
