@@ -48,18 +48,24 @@
         	$(".status").html("Done");
        	 	$(".status").css("display","none");
     	});
-    	$.post("./post/scheduleacademic.php", function(data, status){
-            $('.academic').html(data);
-            bindSubmit();
-        });
-        $.post("./post/scheduleother.php", function(data, status){
-            $('.other-schedule-content').html(data);
-            bindSubmit();
-        });
-        $.post("./post/upcoming-batches.php", function(data, status){
-            $('.upcoming-batches-content').html(data);
-            bindSubmit();
-        });
+    	$("button#academic").click(function(){
+	    	$.post("./post/scheduleacademic.php", function(data, status){
+	            $('.academic').html(data);
+	            bindSubmit();
+	        });
+	    });
+    	$("button#other-schedule").click(function(){
+	        $.post("./post/scheduleother.php", function(data, status){
+	            $('.other-schedule-content').html(data);
+	            bindSubmit();
+	        });
+	    });
+    	$("button#upcoming-batches").click(function(){
+	        $.post("./post/upcoming-batches.php", function(data, status){
+	            $('.upcoming-batches-content').html(data);
+	            bindSubmit();
+	        });
+	    });
         	
 		$('button').click(function(){
 			$(".main-content div").css("display","none");

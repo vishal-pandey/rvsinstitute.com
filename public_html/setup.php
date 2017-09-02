@@ -55,4 +55,9 @@
 	$sql4 = "create table notice (id int(4) primary key auto_increment , title varchar (500) UNIQUE, content text, creation date);";
 	$conn->query($sql4);
 
+	$sql5 = "create table s_material (cid int(11) , smid int(11) primary key auto_increment, title text, content text, foreign key (cid) references course (CourseID) on update cascade on delete cascade );";
+	$conn->query($sql5);
+
+	$sql6 = "create table stu_course (s_mo bigint(10), c_id int(11), primary key(s_mo , c_id), foreign key (s_mo) references r_student(s_mobile) on update cascade on delete cascade,  foreign key (c_id) references course(CourseID) on update cascade on delete cascade);";
+	$conn->query($sql6);
 ?>

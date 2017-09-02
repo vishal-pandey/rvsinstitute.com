@@ -57,30 +57,42 @@
         	$(".status").html("Done");
        	 	$(".status").css("display","none");
     	});
-    	$.post("./post/pageabout.php", function(data, status){
-            $('.about-rvs').html(data);
-            bindSubmit();
-        });
-        $.post("./post/pagefrommd.php", function(data, status){
-            $('.from-md').html(data);
-            bindSubmit();
-        });
-        $.post("./post/pageourmission.php", function(data, status){
-            $('.our-mission').html(data);
-            bindSubmit();
-        });		
-        $.post("./post/exam-date.php", function(data, status){
-            $('.exam-date').html(data);
-            bindSubmit();
-        });
-        $.post("./post/exam-topper.php", function(data, status){
-            $('.exam-topper').html(data);
-            bindSubmit();
-        });
-        $.post("./post/exam-govt.php", function(data, status){
-            $('.exam-govt').html(data);
-            bindSubmit();
-        });
+    	$("button#about-rvs").click(function(){
+	    	$.post("./post/pageabout.php", function(data, status){
+	            $('.about-rvs').html(data);
+	            bindSubmit();
+	        });
+	    });
+        $("button#from-md").click(function(){
+	        $.post("./post/pagefrommd.php", function(data, status){
+	            $('.from-md').html(data);
+	            bindSubmit();
+	        });
+	    });
+        $("button#our-mission").click(function(){
+	        $.post("./post/pageourmission.php", function(data, status){
+	            $('.our-mission').html(data);
+	            bindSubmit();
+	        });		
+	    });
+        $("button#exam-date").click(function(){
+	        $.post("./post/exam-date.php", function(data, status){
+	            $('.exam-date').html(data);
+	            bindSubmit();
+	        });
+	    });
+        $("button#exam-topper").click(function(){
+	        $.post("./post/exam-topper.php", function(data, status){
+	            $('.exam-topper').html(data);
+	            bindSubmit();
+	        });
+	    });
+        $("button#exam-govt").click(function(){
+	        $.post("./post/exam-govt.php", function(data, status){
+	            $('.exam-govt').html(data);
+	            bindSubmit();
+	        });
+	    });
 		$('button').click(function(){
 			$(".main-content div").css("display","none");
 			$(".side-menu button").css("background","initial");

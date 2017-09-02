@@ -50,18 +50,24 @@
         	$(".status").html("Done");
        	 	$(".status").css("display","none");
     	});
-    	$.post("./post/cbse-paper.php", function(data, status){
-            $('.cbse-paper-content').html(data);
-            bindSubmit();
-        });
-        $.post("./post/imp-question.php", function(data, status){
-            $('.imp-question-content').html(data);
-            bindSubmit();
-        });
-        $.post("./post/rvs-paper.php", function(data, status){
-            $('.rvs-paper-content').html(data);
-            bindSubmit();
-        });
+    	$("button#cbse-paper").click(function(){
+	    	$.post("./post/cbse-paper.php", function(data, status){
+	            $('.cbse-paper-content').html(data);
+	            bindSubmit();
+	        });
+	    });
+	    $("button#imp-question").click(function(){
+	        $.post("./post/imp-question.php", function(data, status){
+	            $('.imp-question-content').html(data);
+	            bindSubmit();
+	        });
+	    })
+	    $("button#rvs-paper").click(function(){
+	        $.post("./post/rvs-paper.php", function(data, status){
+	            $('.rvs-paper-content').html(data);
+	            bindSubmit();
+	        });
+	    });
         	
 		$('button').click(function(){
 			$(".main-content div").css("display","none");

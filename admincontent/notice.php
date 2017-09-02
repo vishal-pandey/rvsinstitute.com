@@ -37,14 +37,18 @@
         	$(".status").html("Done");
        	 	$(".status").css("display","none");
     	});
-    	$.post("./post/addnotice.php", function(data, status){
-            $('.addnotice').html(data);
-            bindSubmit();
-        });
-        $.post("./post/addcontent.php", function(data, status){
-            $('.addcontent').html(data);
-            bindSubmit();
-        });
+    	$("button#addnotice").click(function(){
+	    	$.post("./post/addnotice.php", function(data, status){
+	            $('.addnotice').html(data);
+	            bindSubmit();
+	        });
+	    });
+	    $("button#addcontent").click(function(){
+	        $.post("./post/addcontent.php", function(data, status){
+	            $('.addcontent').html(data);
+	            bindSubmit();
+	        });
+	    });
 
 		$('button').click(function(){
 			$(".main-content div").css("display","none");

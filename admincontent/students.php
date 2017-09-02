@@ -16,6 +16,7 @@
 			<ol>
 				<li>This is the section of the admin panel where you would manage everything related to students.</li>
 				<li>Select the menu item from the left to manage</li>
+				<li>Course Code Must Be 5 digits in length</li>
 			</ol>
 		</p>
 	</div>
@@ -30,7 +31,7 @@
 	</div>
 	<div class="assign">
 		<h3 align="center">Assign Course</h3>
-		<div class=""></div>
+		<div class="assign-course"></div>
 	</div>
 	<div class="home-work">
 		<h3 align="center">Home Work</h3>
@@ -58,26 +59,43 @@
         	$(".status").html("Done");
        	 	$(".status").css("display","none");
     	});
-		$.post("./post/studenttable.php", function(data, status){
-            $('.student-table').html(data);
-            bindSubmit();
+    	$("button#registered").click(function(){
+			$.post("./post/studenttable.php", function(data, status){
+	            $('.student-table').html(data);
+	            bindSubmit();
+	        });
+	    });
+        $("button#home-work").click(function(){
+	        $.post("./post/home-work.php", function(data, status){
+	            $('.home-work-content').html(data);
+	            bindSubmit();
+	        });
+    	});
+    	$("button#student-video").click(function(){
+	        $.post("./post/student-video.php", function(data, status){
+	            $('.student-video-content').html(data);
+	            bindSubmit();
+	        });
+	    });
+    	$("button#result").click(function(){
+	        $.post("./post/result.php", function(data, status){
+	            $('.result-content').html(data);
+	            bindSubmit();
+	        });
+    	});
+    	$("button#course").click(function(){
+	        $.post("./post/coursetable.php", function(data, status){
+	            $('.course-table').html(data);
+	            bindSubmit();
+	        });
+	    });
+        $("button#assign").click(function(){
+        	$.post("./post/assign-course.php", function(data, status){
+           		$('.assign-course').html(data);
+            	bindSubmit();
+        	});
         });
-        $.post("./post/home-work.php", function(data, status){
-            $('.home-work-content').html(data);
-            bindSubmit();
-        });
-        $.post("./post/student-video.php", function(data, status){
-            $('.student-video-content').html(data);
-            bindSubmit();
-        });
-        $.post("./post/result.php", function(data, status){
-            $('.result-content').html(data);
-            bindSubmit();
-        });
-        $.post("./post/coursetable.php", function(data, status){
-            $('.course-table').html(data);
-            bindSubmit();
-        });
+        
 		$('button').click(function(){
 			$(".main-content div").css("display","none");
 			$(".side-menu button").css("background","initial");
@@ -158,6 +176,28 @@
 				               		
 				               		$.post("./post/home-work.php", function(data, status){
 								            $('.home-work-content').html(data);
+								            bindSubmit();
+								        });
+
+				               }
+				           }
+				         });
+				    e.preventDefault(); 
+				});
+			});
+			$('.assign').ready(function(){
+				$(".assign-course-form").submit(function(e) {
+				    var url = "./post/assign-course-form.php"; 
+
+				    $.ajax({
+				           type: "POST",
+				           url: url,
+				           data: $(this).serialize(), 
+				           success: function(data)
+				           {
+				               if (data == "success") {
+				               		$.post("./post/assign-course.php", function(data, status){
+								            $('.assign-course').html(data);
 								            bindSubmit();
 								        });
 
