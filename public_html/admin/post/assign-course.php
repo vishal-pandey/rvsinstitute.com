@@ -38,10 +38,20 @@
 						<td>{$course}<br>";
 
 			echo "<form class='assign-course-form'>
+						<input type='test' value='add' name='toggle' style='display:none;'>
 						<input type='text' name='s_mo' value='{$row["s_mobile"]}' style='display:none;'>
 				
 						{$options}
-						<button class='btn btn-default'>submit</button>
+						<button class='btn btn-default'>Add</button>
+									
+					</form>
+					<form class='assign-course-form'>
+						<input type='test' value='delete' name='toggle' style='display:none;'>
+						<input type='text' name='s_mo' value='{$row["s_mobile"]}' style='display:none;'>
+				
+						{$options}
+
+						<button class='btn btn-default'>Delete</button>
 									
 					</form>
 			";
