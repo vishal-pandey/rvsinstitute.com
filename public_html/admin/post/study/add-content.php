@@ -48,7 +48,14 @@ $(document).ready(function(){
 		           {
 		               		
 		               if (data == "success") {
-		               		document.getElementById("myForm").reset();
+		               		// document.getElementById("myForm").reset();
+		               		$.post("./post/study/add-content.php",
+							{
+								cid:cid
+							},
+							function(data){
+								$(".s_material-content").html(data);
+							});
 		               		$.post("./post/study/doc_list.php",
 		               		{
 		               			cid:cid
