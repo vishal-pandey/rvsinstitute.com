@@ -17,11 +17,11 @@
 			}
 			else{
 			    echo  "	<section class='well'>
-			    		<center><img src='http://localhost/rvsinstitute.com/public_html/files/".$value."' width='100px' height='100px'></center>
+			    		<center><img src='http://rvsinstitute.com/files/".$value."' width='100px' height='100px'></center>
 
 			    		
 
-				    	<div class='col-sm-8'><label>Link</label><input type='text' value='localhost/rvsinstitute.com/public_html/files/".$value."' class='form-control'></div>
+				    	<div class='col-sm-8'><label>Link</label><input type='text' value='rvsinstitute.com/files/".$value."' class='form-control'></div>
 
 				    	<br>
 				    	<form class='file-delete-form' method='post'>
