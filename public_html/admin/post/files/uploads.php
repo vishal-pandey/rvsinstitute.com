@@ -21,7 +21,7 @@
 
 			    		
 
-				    	<div class='col-sm-8'><label>Link</label><input type='text' value='rvsinstitute.com/files/".$value."' class='form-control'></div>
+				    	<div class='col-sm-8'><label>Link</label><input type='text' value='http://rvsinstitute.com/files/".$value."' class='form-control'></div>
 
 				    	<br>
 				    	<form class='file-delete-form' method='post'>
