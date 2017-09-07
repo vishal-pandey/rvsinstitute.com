@@ -1,8 +1,10 @@
+<?php
+?>
 <div class="fee">
 	<h3 align="center" style="margin-top: 0px; color: green;"><u>Fee Details</u></h3>
 	<div class="well col-sm-12">
-		<b>Monthly Fee : <span class="s-fee" style="color: green">1000</span></b>
-		<b class="pull-right">Due Date : <span class="s-due">05/08/2017</span></b>
+		<b>Monthly Fee : <span class="s-fee" style="color: green"><?php echo $profile['thefees']; ?></span></b>
+		<b class="pull-right">Due Date : <span class="s-due"><?php echo $profile['s_date'] ?></span></b>
 	</div>
 	<h4 align="center" style="margin-top: 0px; color: green;">Payment History</h4>
 	<div class="well col-sm-12">

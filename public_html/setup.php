@@ -60,4 +60,10 @@
 
 	$sql6 = "create table stu_course (s_mo bigint(10), c_id int(11), primary key(s_mo , c_id), foreign key (s_mo) references r_student(s_mobile) on update cascade on delete cascade,  foreign key (c_id) references course(CourseID) on update cascade on delete cascade);";
 	$conn->query($sql6);
+
+	$sql6 = "create table fees(s_mo bigint(10), p_date date, f_paid int(6), f_due int(6),  foreign key (s_mo) references r_student (s_mobile));";
+	$conn->query($sql6);
+
+	$sql6 = "alter table r_student add (thefees int(6), s_date date);";
+	$conn->query($sql6);
 ?>

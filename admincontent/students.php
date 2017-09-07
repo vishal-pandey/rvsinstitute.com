@@ -8,6 +8,8 @@
     <button class="btn btn-default col-sm-12" id="home-work">Home Work</button>
     <button class="btn btn-default col-sm-12" id="student-video">Student Videos</button>
     <button class="btn btn-default col-sm-12" id="result">Results</button>
+    <button class="btn btn-default col-sm-12" id="fees">Fees</button>
+    <button class="btn btn-default col-sm-12" id="collect-fees">Collect Fees</button>
 </div>
 <div class="main-content col-sm-10 well">
 	<div class="instruction">
@@ -44,6 +46,14 @@
 	<div class="result">
 		<h3 align="center">Examination Result</h3>
 		<div class="result-content"></div>
+	</div>
+	<div class="fees">
+		<h3 align="center">Fees</h3>
+		<div class="fees-content"></div>
+	</div>
+	<div class="collect-fees">
+		<h3 align="center">Collect Fees</h3>
+		<div class="collect-fees-content"></div>
 	</div>
 	<span class="status">
 	</span>
@@ -93,6 +103,16 @@
         	$.post("./post/assign-course.php", function(data, status){
            		$('.assign-course').html(data);
             	bindSubmit();
+        	});
+        });
+        $("button#fees").click(function(){
+        	$.post("./post/fees/fees.php", function(data, status){
+           		$('.fees-content').html(data);
+        	});
+        });
+        $("button#collect-fees").click(function(){
+        	$.post("./post/fees/collect-fees.php", function(data, status){
+           		$('.collect-fees-content').html(data);
         	});
         });
         
@@ -260,7 +280,7 @@
 	h3{
 		margin: 0;
 	}
-	div.registered , div.course , div.assign , div.home-work, div.student-video , div.result{
+	div.registered , div.course , div.assign , div.home-work, div.student-video , div.result , div.fees, div.collect-fees{
 		display: none;
 	}
 </style>
