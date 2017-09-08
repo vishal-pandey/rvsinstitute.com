@@ -12,7 +12,7 @@
       <li class="notice"><a href="?link=notice">Notice</a></li>
       <li class="pages"><a href="?link=pages">Page</a></li>
       <li class="s_material"><a href="?link=s_material">S Material</a></li>
-      <li class="teacher"><a href="?link=teacher">Teachers</a></li>
+      
 
     </ul>
     <ul class="nav navbar-nav navbar-right">

@@ -61,9 +61,17 @@
 	$sql6 = "create table stu_course (s_mo bigint(10), c_id int(11), primary key(s_mo , c_id), foreign key (s_mo) references r_student(s_mobile) on update cascade on delete cascade,  foreign key (c_id) references course(CourseID) on update cascade on delete cascade);";
 	$conn->query($sql6);
 
-	$sql6 = "create table fees(s_mo bigint(10), p_date date, f_paid int(6), f_due int(6),  foreign key (s_mo) references r_student (s_mobile));";
+	$sql6 = "create table fees(s_mo bigint(10), p_date date, f_paid int(6), mode varchar(50) , ref varchar(100),  foreign key (s_mo) references r_student (s_mobile));";
 	$conn->query($sql6);
 
 	$sql6 = "alter table r_student add (thefees int(6), s_date date);";
 	$conn->query($sql6);
+
+	$sql6 = "alter table r_student add (f_due int (6))";
+	$conn->query($sql6);
+
+
+	$sql7 = "create table teacher(t_name varchar(200), t_uid varchar(50) primary key , t_pwd varchar(20) , t_phone bigint(15) , t_add text , t_subject text );";
+	$conn->query($sql7);
+	
 ?>

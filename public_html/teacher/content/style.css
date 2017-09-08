@@ -1,0 +1,57 @@
+div.main{
+	height: 100vh;
+	overflow: hidden;
+}
+div.side-menu{
+	border-right:1px solid lightgrey;
+	position: fixed;
+	margin-top: 0;
+	height: 100%;
+	overflow: auto;
+	/*border:none;*/
+}
+div.side-menu h3{
+	margin: 0; 
+	margin-top: 10px;
+	padding-bottom: 10px;
+	font-size: 20px; 
+	color: grey;
+	border-bottom: 1px solid lightgrey;
+}
+div.side-menu button{
+	border:none;
+	text-align: left;
+}
+div.side-menu button#instruction{
+	background:lightgrey;
+}
+nav.navbar{
+	margin: 0;
+	border-radius: 0;
+}
+div.main-content{
+	position: fixed;
+	right: 0;
+	background:white;
+	height: 100%;
+	overflow: auto;
+	border-radius: 0;
+	border:none;
+}
+div.main-content>div{
+	padding-bottom: 150px;
+}
+span.status{
+	color: red;
+	display: block;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background:white;
+	overflow: auto;
+	border-radius: 0;
+	width: inherit;
+	border-top:1px solid lightgrey;	
+	padding: 15px;
+	display: none;
+}

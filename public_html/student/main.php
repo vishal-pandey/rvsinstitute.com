@@ -10,7 +10,15 @@
       <a href="./student.php?link=fee"><span class="btn btn-info">Fee Details</span></a>
       <a href="./student.php?link=video"><span class="btn btn-info">Videos</span></a>
       <a href="./student.php?link=home-work"><span class="btn btn-info">Home Work</span></a>
-      <a href="./student.php?link=pay-fee"><span class="btn btn-success">Pay Fee Online</span></a>
+      <?php 
+          date_default_timezone_set("Asia/Kolkata"); 
+          if(strtotime(date('Y-m-d'))-strtotime($profile['s_date'])){
+            $cc = "btn btn-success";
+          }else{
+            $cc = "btn btn-danger";
+          }
+      ?>
+      <a href="./student.php?link=pay-fee"><span class="<?php echo $cc; ?>">Pay Fee Online</span></a>
   </div>
   
   <div class="student-content well col-sm-8 ">

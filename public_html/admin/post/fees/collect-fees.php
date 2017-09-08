@@ -10,7 +10,8 @@
 		<th>Name</th>
 		<th>Mobile</th>
 		<th>Fees</th>
-		<th>Submission Date</th>
+		<th>S Date</th>
+		<th>Fee Submission Details</th>
 	</tr>
 	<?php 
 		while($row = $result->fetch_assoc()){
@@ -20,6 +21,7 @@
 						<td>{$row["s_name"]}</td>
 						<td>{$row["s_mobile"]}</td>
 						<td>{$row["thefees"]}</td>
+						<td>{$row["s_date"]}</td>
 						
 						<td>
 
@@ -33,13 +35,23 @@
 
 								$sql1 = "select * from fees where s_mo = {$s_mobile}";
 								$result1 = $conn->query($sql1);
+
+
+
+								$sql2 = "select * from fees where s_mo = {$s_mobile}";
+								$result2 = $conn->query($sql1);
+								$i = 0;
+								while($row2 = $result2->fetch_assoc()){
+										$i++;
+								}
+								$fduee = "<td rowspan='{$i}'>{$row['f_due']}</td>";
 								while($row1 = $result1->fetch_assoc()){
 									echo "<tr>
 										<td>{$row1['p_date']}</td>
 										<td>{$row1['f_paid']}</td>
-										<td>{$row1['f_due']}</td>
+										{$fduee}
 									</tr>";
-									
+									unset($fduee);
 								}
 								echo "
 							</table>

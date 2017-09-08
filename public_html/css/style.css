@@ -91,6 +91,18 @@ div.profile div.well:hover span.edit{
 
 
 
+/*fees*/
+div.pay-fee{
+  height: 50vh;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+
 
 
 
