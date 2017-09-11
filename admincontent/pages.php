@@ -14,6 +14,12 @@
     <button class="btn btn-default col-sm-12" id="exam-topper">Topper Of Test</button>
 
     <button class="btn btn-default col-sm-12" id="exam-govt">Govt. Job Vaccancy</button>
+
+    <button class="btn btn-default col-sm-12" id="course-academic">Academic Courses</button>
+
+    <button class="btn btn-default col-sm-12" id="course-computer">Computer Courses</button>
+
+    <button class="btn btn-default col-sm-12" id="course-competitive">Competitive Courses</button>
 </div>
 <div class="main-content col-sm-10 well">
 	<div class="instruction">
@@ -41,6 +47,15 @@
 	</div>
 
 	<div class="exam-govt">
+	</div>
+
+	<div class="course-academic">
+	</div>
+
+	<div class="course-computer">
+	</div>
+
+	<div class="course-competitive">
 	</div>
 	
 	<span class="status">
@@ -90,6 +105,24 @@
         $("button#exam-govt").click(function(){
 	        $.post("./post/exam-govt.php", function(data, status){
 	            $('.exam-govt').html(data);
+	            bindSubmit();
+	        });
+	    });
+	    $("button#course-academic").click(function(){
+	        $.post("./post/course-academic.php", function(data, status){
+	            $('.course-academic').html(data);
+	            bindSubmit();
+	        });
+	    });
+	    $("button#course-computer").click(function(){
+	        $.post("./post/course-computer.php", function(data, status){
+	            $('.course-computer').html(data);
+	            bindSubmit();
+	        });
+	    });
+	    $("button#course-competitive").click(function(){
+	        $.post("./post/course-competitive.php", function(data, status){
+	            $('.course-competitive').html(data);
 	            bindSubmit();
 	        });
 	    });

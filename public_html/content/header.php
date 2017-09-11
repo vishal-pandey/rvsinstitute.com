@@ -94,13 +94,13 @@
                   <li class="rvs-grid">
                     <div class="row">
                       <div class="col-xs-6 col-sm-2">
-                        <a href="#" title="#"><img src="assets/images/academic.jpg" width="100%" class="img-responsive" alt="About RVS" /></a>
+                        <a href="./course.php?content=course-academic" title="#"><img src="assets/images/academic.jpg" width="100%" class="img-responsive" alt="About RVS" /></a>
                       </div>
                       <div class="col-xs-6 col-sm-2">
-                         <a href="#"><img src="assets/images/computer.jpg" width="100%" class="img-responsive" alt="About RVS" /></a>
+                         <a href="./course.php?content=course-computer"><img src="assets/images/computer.jpg" width="100%" class="img-responsive" alt="About RVS" /></a>
                       </div><div class="clearfix visible-xs"></div>
                       <div class="col-sm-8">
-                         <a href="#"><img src="assets/images/competitve.jpg" width="100%" height="100%" class="img-responsive" alt="About RVS" /></a>
+                         <a href="./course.php?content=course-competitive"><img src="assets/images/competitve.jpg" width="100%" height="100%" class="img-responsive" alt="About RVS" /></a>
                       </div>
                     </div>
                   </li>

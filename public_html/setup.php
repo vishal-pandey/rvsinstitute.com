@@ -14,6 +14,15 @@
 
 	$sql2 = "INSERT INTO pages (pid) VALUES ('our-mission')";
 	$conn->query($sql2);
+	
+	$sql2 = "INSERT INTO pages (pid , title) VALUES ('course-academic' , 'Academic Courses')";
+	$conn->query($sql2);
+
+	$sql2 = "INSERT INTO pages (pid , title) VALUES ('course-competitive' , 'Competitive Courses')";
+	$conn->query($sql2);
+
+	$sql2 = "INSERT INTO pages (pid , title) VALUES ('course-computer' , 'Computer Courses')";
+	$conn->query($sql2);
 
 	$sql2 = "INSERT INTO pages (pid, title) VALUES ('home-work', 'Home Work')";
 	$conn->query($sql2);

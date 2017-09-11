@@ -1,5 +1,5 @@
 <?php
-	if ($_POST['pid'] == 'about-rvs' || $_POST['pid'] == 'from-md' || $_POST['pid'] == 'our-mission' || $_POST['pid'] == 'home-work' || $_POST['pid'] == 'student-video' || $_POST['pid'] == 'result' || $_POST['pid'] == 'other-schedule' || $_POST['pid'] == 'upcoming-batches' || $_POST['pid'] == 'cbse-paper' || $_POST['pid'] == 'rvs-paper' || $_POST['pid'] == 'imp-question' || $_POST['pid'] == 'exam-date' || $_POST['pid'] == 'exam-topper'  || $_POST['pid'] == 'exam-govt') {
+	if ($_POST['pid'] == 'about-rvs' || $_POST['pid'] == 'from-md' || $_POST['pid'] == 'our-mission' || $_POST['pid'] == 'home-work' || $_POST['pid'] == 'student-video' || $_POST['pid'] == 'result' || $_POST['pid'] == 'other-schedule' || $_POST['pid'] == 'upcoming-batches' || $_POST['pid'] == 'cbse-paper' || $_POST['pid'] == 'rvs-paper' || $_POST['pid'] == 'imp-question' || $_POST['pid'] == 'exam-date' || $_POST['pid'] == 'exam-topper'  || $_POST['pid'] == 'exam-govt' || $_POST['pid'] == 'course-competitive' || $_POST['pid'] == 'course-academic' || $_POST['pid'] == 'course-computer') {
 		include_once "../../../adminlibrary/phplib.php";
 		$title = $_POST['title'];
 		$content = $_POST['content'];
