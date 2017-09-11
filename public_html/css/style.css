@@ -10,7 +10,8 @@ div.student{
 }
 
 div.student-menu{
-	background-color: rgb(200,100,100);
+	background-color: rgb(123,233,192);
+  min-height: 50vh;
 }
 
 div.student-menu-toggle{

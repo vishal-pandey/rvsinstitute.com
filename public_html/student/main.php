@@ -6,7 +6,7 @@
       <a href="./student.php?link=profile"><span class="btn btn-info">Profile</span></a>
       <a href="./student.php?link=study-material"><span class="btn btn-info">Study Material</span></a>
       <a href="./student.php?link=result"><span class="btn btn-info">Result</span></a>
-      <a href="./student.php?link=test-paper"><span class="btn btn-info">Test Papers</span></a>
+      <!-- <a href="./student.php?link=test-paper"><span class="btn btn-info">Test Papers</span></a> -->
       <a href="./student.php?link=fee"><span class="btn btn-info">Fee Details</span></a>
       <a href="./student.php?link=video"><span class="btn btn-info">Videos</span></a>
       <a href="./student.php?link=home-work"><span class="btn btn-info">Home Work</span></a>
