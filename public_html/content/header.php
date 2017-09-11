@@ -85,11 +85,7 @@
                         <p></p>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <img src="assets/images/faculty.png" width="100%" class="img-responsive" alt="About RVS" />
-                      </div>
-                    </div>
+                    
                   </li>
                 </ul>
               </li>
