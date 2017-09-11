@@ -50,3 +50,4 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <script type="text/javascript" src="./library/jslibrary.js"></script>
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=256gc03wguquizs8zvwesfp5o211r8aq6wex5uk06obk2w0n"></script>

@@ -147,9 +147,9 @@
                             <h4 class="media-heading"><a href="./contact.php?link=query"><i class="fa fa-envelope" aria-hidden="true"></i> Send Us Query</a></h4>You can also send us mail. Just click here and go. We will soon revert back to you.
                           </div>
                         </li>
-                        <li class="media"><a href="#" class="pull-right"><i class="fa fa-handshake-o" style="font-size:60px;" aria-hidden="true"></i></a>
+                        <li class="media"><a href="./contact.php?link=career" class="pull-right"><i class="fa fa-handshake-o" style="font-size:60px;" aria-hidden="true"></i></a>
                           <div class="media-body">
-                            <h4 class="media-heading"><a href=""><i class="fa fa-handshake-o" aria-hidden="true"></i> Career</a></h4>If you are looking for a job as a teacher in RVS Institute. Just one click to go.
+                            <h4 class="media-heading"><a href="./contact.php?link=career"><i class="fa fa-handshake-o" aria-hidden="true"></i> Career</a></h4>If you are looking for a job as a teacher in RVS Institute. Just one click to go.
                           </div>
                         </li>
                       </ul>
