@@ -133,6 +133,6 @@
 		font-size: 20px;
 	}
 	.side-menu{
-		padding-bottom: 150px;
+		padding-bottom: 100px;
 	}
 </style>
