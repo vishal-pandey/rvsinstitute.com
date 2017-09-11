@@ -104,6 +104,7 @@
 		top: 0;
 		position: absolute;
 		overflow: auto;
+		padding-bottom: 150px;
 
 	}
 
@@ -130,5 +131,8 @@
 		padding-bottom: 10px;
 		margin-bottom: 15px;
 		font-size: 20px;
+	}
+	.side-menu{
+		padding-bottom: 150px;
 	}
 </style>
