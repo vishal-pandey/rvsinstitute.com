@@ -22,7 +22,7 @@
 </div>
 <?php
     if (isset($_POST['submit'])) {
-        if (($_POST['uid'] == "hello") && ($_POST['password'] == "password"))
+        if (($_POST['uid'] == "admin") && ($_POST['password'] == "abc@123"))
         {
             $_SESSION['theadmin'] = "superadmin";
             echo '<script type="text/javascript">location.reload();</script>';

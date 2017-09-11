@@ -121,6 +121,7 @@
 		height: 100%;
 		overflow: auto;
 		padding-top: 15px;
+		padding-bottom: 150px;
 	}
 	.right-menu h3{
 		color: grey;

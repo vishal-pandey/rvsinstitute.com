@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">RVS Institute</a>
+      <a class="navbar-brand" href="#">RVS Institute (<small><?php echo $_SESSION['t_name']; ?></small>)</a>
     </div>
     <ul class="nav navbar-nav">
       <?php if($_GET['link'] == ""){echo '<li class="active"><a href="./">Home</a></li>';}else{echo '<li><a href="./">Home</a></li>';} ?>
