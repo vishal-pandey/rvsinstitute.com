@@ -72,6 +72,9 @@
 
 
 	$sql7 = "create table teacher(t_name varchar(200), t_uid varchar(50) primary key , t_pwd varchar(20) , t_phone bigint(15) , t_add text , t_subject text );";
-	$conn->query($sql7);
+	// $conn->query($sql7);
+
+	$sql8 = "create table contact (name varchar(200) , phone bigint(10) , query text , callback char(3));";
+	$conn->query($sql8);
 	
 ?>

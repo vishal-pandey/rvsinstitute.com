@@ -137,14 +137,14 @@
                   <li>
                     <div class="rvs-content">
                       <ul class="media-list">
-                        <li class="media"><a href="#" class="pull-right"><i class="fa fa-phone" style="font-size:64px;" aria-hidden="true"></i></a>
+                        <li class="media"><a href="./contact.php?link=call-back" class="pull-right"><i class="fa fa-phone" style="font-size:64px;" aria-hidden="true"></i></a>
                           <div class="media-body">
-                            <h4 class="media-heading"><a href="" title="Click here to send us your detail. We will call you back at the earliest."><i class="fa fa-phone-square" aria-hidden="true"></i> Get a Call Back</h4></a>Click here and fill a few detail. We will call you back within 24 hours.
+                            <h4 class="media-heading"><a href="./contact.php?link=call-back" title="Click here to send us your detail. We will call you back at the earliest."><i class="fa fa-phone-square" aria-hidden="true"></i> Get a Call Back</h4></a>Click here and fill a few detail. We will call you back within 24 hours.
                           </div>
                         </li>
-                        <li class="media"><a href="#" class="pull-right"><i class="fa fa-envelope" style="font-size:60px;" aria-hidden="true"></i></a>
+                        <li class="media"><a href="./contact.php?link=query" class="pull-right"><i class="fa fa-envelope" style="font-size:60px;" aria-hidden="true"></i></a>
                           <div class="media-body">
-                            <h4 class="media-heading"><a href=""><i class="fa fa-envelope" aria-hidden="true"></i> Send Us Query</a></h4>You can also send us mail. Just click here and go. We will soon revert back to you.
+                            <h4 class="media-heading"><a href="./contact.php?link=query"><i class="fa fa-envelope" aria-hidden="true"></i> Send Us Query</a></h4>You can also send us mail. Just click here and go. We will soon revert back to you.
                           </div>
                         </li>
                         <li class="media"><a href="#" class="pull-right"><i class="fa fa-handshake-o" style="font-size:60px;" aria-hidden="true"></i></a>

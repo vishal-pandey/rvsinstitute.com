@@ -1,4 +1,37 @@
+center{
+  text-align: center;
+}
 
+
+.contact{
+  border-radius: 0px;
+  min-height: 100vh;
+  margin-bottom: -10px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.contact form{
+  /*margin-top: 60px;*/
+}
+.call-back{
+  float: initial;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.thankyou{
+  border-radius: 0px;
+  min-height: 80vh;
+  margin-bottom: -10px;
+  font-size: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
 
 div.student{
