@@ -26,35 +26,40 @@ If (isset($_POST["additionalCharges"])) {
 	       echo "Invalid Transaction. Please try again";
 		   }
 	   else {
+            session_start();
           // Successs now processsing payment
             date_default_timezone_set("Asia/Kolkata");
 
             include "./library/library.php";
-            $sql = "select * from r_student where s_mobile = '{$_SESSION['user1']}'";
-            $result = $conn->query($sql);
-            $row = $result->fetch_assoc();
+            $sql1 = "select * from r_student where s_mobile = '{$_SESSION['user1']}'";
+            $result1 = $conn->query($sql1);
+            $row1 = $result1->fetch_assoc();
 
-            $s_mobile = $row['s_mobile'];
+            $s_mobile = $row1['s_mobile'];
             $p_date = date("Y-m-d");
-            $f_paid = $row['thefees'];
+            $f_paid = $row1['thefees'];
 
 
-            $sql = "INSERT into fees (s_mo , p_date , f_paid , mode ) values ('{$s_mobile}' , '{$p_date}' , '{$f_paid}' , 'Online' )";
-            if($conn->query($sql)){
+            $sql3 = "INSERT into fees (s_mo , p_date , f_paid , mode ) values ('{$s_mobile}' , '{$p_date}' , '{$f_paid}' , 'Online' )";
+            if($conn->query($sql3)){
               $sql2 = "select s_date from r_student where s_mobile = {$s_mobile}";
-              $result = $conn->query($sql2);
-              $row = $result->fetch_assoc();
+              $result2 = $conn->query($sql2);
+              $row2 = $result2->fetch_assoc();
 
-              $s_date = strtotime($row['s_date']);
+              $s_date = strtotime($row2['s_date']);
               $s_date = date("Y-m-d", strtotime("+1 month", $s_date));
 
-              $sql1 = "update r_student set f_due = '0' , s_date = '{$s_date}' where s_mobile = {$s_mobile}";
-              $conn->query($sql1);
+              $sql4 = "update r_student set s_date = '{$s_date}' where s_mobile = {$s_mobile}";
+              $conn->query($sql4);
 
               echo '<script type="text/javascript">  window.location.href="./student.php?link=fee"; </script>'; 
             }
             else{
               echo "something wrong happened";
+              echo $sql1."<br>";
+              echo $sql2."<br>";
+              echo $sql3."<br>";
+              echo $sql4."<br>";
             }
              echo "<h3>Thank You. Your order status is ". $status .".</h3>";
           echo "<h4>Your Transaction ID for this transaction is ".$txnid.".</h4>";
