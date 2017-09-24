@@ -26,9 +26,7 @@ If (isset($_POST["additionalCharges"])) {
 	       echo "Invalid Transaction. Please try again";
 		   }
 	   else {
-
-            // Successs now processsing payment
-
+          // Successs now processsing payment
             date_default_timezone_set("Asia/Kolkata");
 
             include "./library/library.php";
@@ -38,7 +36,8 @@ If (isset($_POST["additionalCharges"])) {
 
             $s_mobile = $row['s_mobile'];
             $p_date = date("Y-m-d");
-            $f_paid = $amount;
+            $f_paid = $row['thefees'];
+
 
             $sql = "INSERT into fees (s_mo , p_date , f_paid , mode , ref) values ('{$s_mobile}' , '{$p_date}' , '{$f_paid}' , 'Online' , '{$txnid}')";
             if($conn->query($sql)){
@@ -49,7 +48,7 @@ If (isset($_POST["additionalCharges"])) {
               $s_date = strtotime($row['s_date']);
               $s_date = date("Y-m-d", strtotime("+1 month", $s_date));
 
-              $sql1 = "update r_student set f_due = '{$f_due}' , s_date = '{$s_date}' where s_mobile = {$s_mobile}";
+              $sql1 = "update r_student set f_due = '0' , s_date = '{$s_date}' where s_mobile = {$s_mobile}";
               $conn->query($sql1);
 
               echo '<script type="text/javascript">  window.location.href="./student.php?link=fee"; </script>'; 
@@ -58,4 +57,5 @@ If (isset($_POST["additionalCharges"])) {
               echo "something wrong happened";
             }
 		   }         
+
 ?>
