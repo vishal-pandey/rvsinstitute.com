@@ -40,7 +40,7 @@ If (isset($_POST["additionalCharges"])) {
             $f_paid = $row1['thefees'];
 
 
-            $sql3 = "INSERT into fees (s_mo , p_date , f_paid , mode ) values ('{$s_mobile}' , '{$p_date}' , '{$f_paid}' , 'Online' )";
+            $sql3 = "INSERT into fees (s_mo , p_date , f_paid , mode , ref ) values ('{$s_mobile}' , '{$p_date}' , '{$f_paid}' , 'Online', '{$txnid}' )";
             if($conn->query($sql3)){
               $sql2 = "select s_date from r_student where s_mobile = {$s_mobile}";
               $result2 = $conn->query($sql2);
