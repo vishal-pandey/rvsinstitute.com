@@ -3,6 +3,8 @@
     <br>
     <button class="btn btn-default col-sm-12" id="instruction">Instruction</button>
     <button class="btn btn-default col-sm-12" id="uploads">Uploads</button>
+
+    <button class="btn btn-default col-sm-12" id="profile">Profile</button>
     
 </div>
 <div class="main-content col-sm-10 well">
@@ -16,6 +18,7 @@
 		</p>
 	</div>
 	<div class="uploads"></div>
+	<div class="profile"></div>
 	
 	
 	<span class="status">
@@ -38,6 +41,13 @@
 	            $('.uploads').html(data);
 	        });
 	    });
+
+	    $("button#profile").click(function(){
+	        $.post("./post/profile.php", function(data, status){
+	            $('.profile').html(data);
+	        });
+	    });
+
 		$('button').click(function(){
 			$(".main-content div").css("display","none");
 			$(".side-menu button").css("background","initial");
