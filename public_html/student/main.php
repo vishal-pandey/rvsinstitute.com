@@ -12,7 +12,7 @@
       <a href="./student.php?link=home-work"><span class="btn btn-info">Home Work</span></a>
       <?php 
           date_default_timezone_set("Asia/Kolkata"); 
-          if(strtotime(date('Y-m-d'))-strtotime($profile['s_date'])){
+          if((strtotime(date('Y-m-d'))-strtotime($profile['s_date']))< 0){
             $cc = "btn btn-success";
           }else{
             $cc = "btn btn-danger";
