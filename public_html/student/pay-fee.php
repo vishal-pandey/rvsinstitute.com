@@ -110,10 +110,10 @@
           <textarea name="productinfo" style="display: none;">Payment of Academic Fee of Rs <?php echo $profile['thefees']; ?>  for <?php echo $profile['s_name']; ?> </textarea>
         
         
-          <input name="surl" type="hidden" value="http://www.rvsinstitute.com/test/pay/success.php" size="64" />
+          <input name="surl" type="hidden" value="http://www.rvsinstitute.com/success.php" size="64" />
         
         
-          <input name="furl" type="hidden" value="http://www.rvsinstitute.com/test/pay/failure.php" size="64" />
+          <input name="furl" type="hidden" value="http://www.rvsinstitute.com/failure.php" size="64" />
         
 
         
