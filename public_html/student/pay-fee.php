@@ -73,9 +73,13 @@
         return;
       }
       var payuForm = document.forms.payuForm;
-      $(".payuForm").submit();
       payuForm.submit();
     }
+  </script>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+  		submitPayuForm();
+  	});
   </script>
   </head>
   <body onload="submitPayuForm()">
@@ -87,7 +91,7 @@
       <br/>
       <br/>
     <?php } ?>
-    <form action="<?php echo $action; ?>" method="post" name="payuForm" class="payuForm">
+    <form action="<?php echo $action; ?>" method="post" name="payuForm">
       <input type="hidden" name="key" value="<?php echo $MERCHANT_KEY ?>" />
       <input type="hidden" name="hash" value="<?php echo $hash ?>"/>
       <input type="hidden" name="txnid" value="<?php echo $txnid ?>" />
