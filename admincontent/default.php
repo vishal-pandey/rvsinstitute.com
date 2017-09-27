@@ -3,6 +3,7 @@
     <br>
     <button class="btn btn-default col-sm-12" id="instruction">Instruction</button>
     <button class="btn btn-default col-sm-12" id="uploads">Uploads</button>
+    <button class="btn btn-default col-sm-12" id="contact">Enquiry</button>
     
 </div>
 <div class="main-content col-sm-10 well">
@@ -16,10 +17,12 @@
 		</p>
 	</div>
 	<div class="uploads"></div>
+	<div class="contact"></div>
 	
 	
 	<span class="status">
 	</span>
+
 
 </div>
 <script type="text/javascript">
@@ -38,6 +41,13 @@
 	            $('.uploads').html(data);
 	        });
 	    });
+
+	    $("button#contact").click(function(){
+	        $.post("./post/contact.php", function(data, status){
+	            $('.contact').html(data);
+	        });
+	    });
+
 		$('button').click(function(){
 			$(".main-content div").css("display","none");
 			$(".side-menu button").css("background","initial");
