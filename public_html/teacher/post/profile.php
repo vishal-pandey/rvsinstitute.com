@@ -36,7 +36,11 @@
 	<h3 align="center">Teacher Profile</h3>
 	<br>
 	<center>
-		<img src="<?php echo $row['t_pic']."#".filemtime($row['t_pic']); ?>" width="150" height="180">
+		<?php
+			$token = filemtime($row['t_pic']);
+			$purl = $row['t_pic']."#".$token;
+		?>
+		<img src="<?php echo $purl; ?>" width="150" height="180">
 		<form class="t_pic-upload-form" enctype="multipart/form-data">
 			<input type="hidden" name="t_uid" value="<?php echo $row['t_uid']; ?>" >
 			<input type="file" name="t_pic" class="form-control">
