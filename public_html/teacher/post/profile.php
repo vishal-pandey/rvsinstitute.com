@@ -37,7 +37,7 @@
 	<br>
 	<center>
 		<?php
-			$token = filemtime($row['t_pic']);
+			$token = filemtime("../tpic/".$row['t_uid']).".jpg";
 			$purl = $row['t_pic']."#".$token;
 		?>
 		<img src="<?php echo $purl; ?>" width="150" height="180">
