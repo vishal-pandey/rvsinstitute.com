@@ -1,9 +1,14 @@
 <h3 align="center">Add Teacher</h3>
 <div class="col-sm-8 well" style="float: initial; margin-left: auto; margin-right: auto;">
 	<form class="add-teacher-form" method="post">
-		<input type="text" name="t_name" class="form-control" placeholder="Teacher's Name" required="true">
-		<input type="text" name="t_uid" class="form-control" placeholder="User Id"  required="true">
-		<input type="password" name="t_pwd" class="form-control" placeholder="Password"  required="true">
+		<input type="text" name="t_name" class="form-control" placeholder="Teacher's Name*" required="true">
+		<input type="text" name="t_uid" class="form-control" placeholder="User Id*"  required="true">
+		<input type="password" name="t_pwd" class="form-control" placeholder="Password*"  required="true">
+		<input type="text" name="t_phone" class="form-control" placeholder="Phone No">
+		<input type="text" name="t_subject" class="form-control" placeholder="Subject Of teaching"">
+		<input type="text" name="t_quali" class="form-control" placeholder="Qualification">
+		<textarea name="t_bio" placeholder="Short Description About Teacher" class="form-control"></textarea>
+		<textarea name="t_add" placeholder="Address" class="form-control"></textarea>
 		<button class="btn btn-default">Submit</button>
 	</form>
 </div>
