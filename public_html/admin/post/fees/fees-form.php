@@ -17,7 +17,7 @@
 			}
 		}
 		else{
-			
+			echo "Pass";
 		}
 ?>
 success
