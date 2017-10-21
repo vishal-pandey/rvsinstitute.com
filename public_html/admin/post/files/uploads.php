@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if((!isset($_SESSION['theadmin'])) && ($_SESSION['theadmin']!="superadmin")){
+		header("Location:http://www.rvsinstitute.com/");
+		die();
+	}
+?>
 <h3 align="center">Upload Files</h3>
 <section>
 	<form method="post" enctype="multipart/form-data" class="well file-upload-form">

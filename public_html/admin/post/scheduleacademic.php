@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if((!isset($_SESSION['theadmin'])) && ($_SESSION['theadmin']!="superadmin")){
+		header("Location:http://www.rvsinstitute.com/");
+		die();
+	}
+?>
 <h3 align="center">Academic Schedules</h3 align="center">
 <span class="theTable">
 	<table class="table table-bordered">

@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if((!isset($_SESSION['theadmin'])) && ($_SESSION['theadmin']!="superadmin")){
+		header("Location:http://www.rvsinstitute.com/");
+		die();
+	}
+?>
 <table class="table table-bordered">
 	<tr>
 		<th>Name</th>

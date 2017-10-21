@@ -1,4 +1,11 @@
 <?php
+	session_start();
+	if((!isset($_SESSION['theadmin'])) && ($_SESSION['theadmin']!="superadmin")){
+		header("Location:http://www.rvsinstitute.com/");
+		die();
+	}
+?>
+<?php
 	include "../../../../adminlibrary/phplib.php";
 	$content = $_POST['content'];
 	$cid =  $_POST['cid'];

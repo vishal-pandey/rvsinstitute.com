@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if((!isset($_SESSION['theadmin'])) && ($_SESSION['theadmin']!="superadmin")){
+		header("Location:http://www.rvsinstitute.com/");
+		die();
+	}
+?>
 <h3 align="center">Enquiry</h3>
 <br>
 <div class="well col-sm-12">

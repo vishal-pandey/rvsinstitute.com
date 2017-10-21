@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if((!isset($_SESSION['theadmin'])) && ($_SESSION['theadmin']!="superadmin")){
+		header("Location:http://www.rvsinstitute.com/");
+		die();
+	}
+?>
 <h3 align="center">Add Teacher</h3>
 <div class="col-sm-8 well" style="float: initial; margin-left: auto; margin-right: auto;">
 	<form class="add-teacher-form" method="post">

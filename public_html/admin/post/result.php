@@ -3,7 +3,14 @@
 	if((!isset($_SESSION['theadmin'])) && ($_SESSION['theadmin']!="superadmin")){die();
 		header("Location:http://www.rvsinstitute.com/");
 	}
+?><?php
+	session_start();
+	if((!isset($_SESSION['theadmin'])) && ($_SESSION['theadmin']!="superadmin")){
+		header("Location:http://www.rvsinstitute.com/");
+		die();
+	}
 ?>
+
 <?php
 	include_once "../../../adminlibrary/phplib.php";
 	$sql = "SELECT * FROM pages where pid = 'result'";

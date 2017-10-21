@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if((!isset($_SESSION['theadmin'])) && ($_SESSION['theadmin']!="superadmin")){
+		header("Location:http://www.rvsinstitute.com/");
+		die();
+	}
+?>
 <div class="well" style="border-radius: 0; background: rgb(250,250,250);">
 <h3 align="center">Add Content to this Course</h3>
 <br>
