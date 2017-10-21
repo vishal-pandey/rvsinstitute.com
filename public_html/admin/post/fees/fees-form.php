@@ -1,5 +1,5 @@
 <?php
-		if ( $_SERVER['HTTP_REFERER'] == 'https://cbts.in/test.php' ) 
+		if ( $_SERVER['HTTP_REFERER'] == 'http://rvsinstitute.com/admin/index.php' ) 
 		{
 			include_once "../../../../adminlibrary/phplib.php";
 			$thefees = $_POST['thefees'];
@@ -15,12 +15,9 @@
 				$sql = "update r_student set s_date = '{$s_date}' where s_mobile = {$s_mobile}";
 				$conn->query($sql);
 			}
-			echo $_SERVER['HTTP_REFERER'];
 		}
 		else{
-			echo $_SERVER['HTTP_REFERER'];
 			echo "Pass";
 		}
-		echo $_SERVER['HTTP_REFERER'];
 ?>
 success
