@@ -21,5 +21,6 @@
 			echo $_SERVER['HTTP_REFERER'];
 			echo "Pass";
 		}
+		echo $_SERVER['HTTP_REFERER'];
 ?>
 success
