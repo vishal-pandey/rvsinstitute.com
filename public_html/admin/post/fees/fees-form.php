@@ -1,5 +1,5 @@
 <?php
-		if ( $_SERVER['HTTP_REFERER'] == 'http://cbts.in/test.php' ) 
+		if ( $_SERVER['HTTP_REFERER'] == 'https://cbts.in/test.php' ) 
 		{
 			include_once "../../../../adminlibrary/phplib.php";
 			$thefees = $_POST['thefees'];
