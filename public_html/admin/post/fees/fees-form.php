@@ -15,8 +15,10 @@
 				$sql = "update r_student set s_date = '{$s_date}' where s_mobile = {$s_mobile}";
 				$conn->query($sql);
 			}
+			$_SERVER['HTTP_REFERER'];
 		}
 		else{
+			$_SERVER['HTTP_REFERER'];
 			echo "Pass";
 		}
 ?>
