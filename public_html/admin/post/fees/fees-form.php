@@ -1,5 +1,5 @@
 <?php
-		if ( $_SERVER['HTTP_REFERER'] == '/var/www/rvsinstitute.com/public_html/admin/' ) 
+		if ( $_SERVER['HTTP_REFERER'] == 'http://rvsinstitute.com/public_html/admin/' ) 
 		{
 			include_once "../../../../adminlibrary/phplib.php";
 			$thefees = $_POST['thefees'];
