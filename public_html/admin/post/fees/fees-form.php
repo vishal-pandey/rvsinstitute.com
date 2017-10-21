@@ -1,9 +1,6 @@
 <?php
-		if ( $_SERVER['REQUEST_METHOD']=='POST' && realpath(__FILE__) == realpath( $_SERVER['SCRIPT_FILENAME'] ) ) 
+		if ( $_SERVER['HTTP_REFERER'] == '/var/www/rvsinstitute.com/public_html/admin/' ) 
 		{
-			header( 'HTTP/1.0 403 Forbidden', TRUE, 403 );
-		}
-		else{
 			include_once "../../../../adminlibrary/phplib.php";
 			$thefees = $_POST['thefees'];
 			$s_mobile = $_POST['s_mobile'];
@@ -18,6 +15,9 @@
 				$sql = "update r_student set s_date = '{$s_date}' where s_mobile = {$s_mobile}";
 				$conn->query($sql);
 			}
+		}
+		else{
+			
 		}
 ?>
 success
